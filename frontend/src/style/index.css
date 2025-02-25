@@ -1,0 +1,91 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+#Login_button {
+    padding: 12px 16px;
+    color: white;
+    font-size: 16px;
+    background-color: #2B3894;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.Gnc_gen {
+    width: 600px;
+    border-radius: 15px;
+    background: rgb(222,222,222);
+    background: linear-gradient(90deg, rgba(222,222,222,0.75) 100%, rgba(222,222,222,0.75) 100%);
+}
+
+.Gnc_Head {
+    color: var(--base1);
+}
+
+.Gnc_header{
+    background-color: #FFC100;
+}
+
+.Gnc_h1{
+    color: var(--base1)!important;
+    /* overflow-wrap: break-word;
+  word-wrap: break-word; */
+}
+
+.Library_img {
+    max-height: 70%; 
+    max-width: 60%; 
+    height: auto;  
+    width: auto;
+    position: absolute;
+    right: 0;   
+}
+
+.Library_head{
+    color: var(--base1);
+    font-weight: 700;
+}
+
+.Border_contend{
+    color: gray!important;
+    letter-spacing: 0.2px;
+    border-left: 6px solid #FFC100;
+    line-height: 1.6!important;
+    font-size: 20px;
+}
+
+.Library_button{
+    padding: 10px 20px;
+    color: #2B3894;
+    font-size: 16px;
+    border: 2px solid #2B3894;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+}
+@media (max-width: 556px) {
+    .Border_contend {
+      font-size: 14px; 
+    }
+    #Login_button {
+      padding: 10px 14px;
+      color: white;
+      font-size: 12px;
+      background-color: #2B3894;
+      text-decoration: none;
+      border-radius: 25px;
+    }
+    .Library_button{
+        padding: 10px 20px;
+        color: #2B3894;
+        font-size: 12px;
+        border: 2px solid #2B3894;
+        text-decoration: none;
+        border-radius: 25px;
+        display: inline-block;
+    }
+  }

@@ -1,0 +1,47 @@
+
+.questionpaper-container {
+    background-color: #c40c0c2e;
+}
+
+.question-paper-title {
+    background-color: var(--base5);
+    color: white;
+}
+
+.question-list {
+    background-color: var(--92);
+}
+
+.input-group-text {
+    border: 1px solid var(--base4) !important;
+}
+
+#customContextMenu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: var(--86);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+  }
+
+  #customContextMenu li {
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+
+  #customContextMenu li:hover {
+    background-color: var(--base4);
+  }
+
+  #addNewQuestionPaperSubmitButton {
+    background-color: var(--base2);
+    color: white;
+  }
+
+  .subject-info {
+    color: var(--base3);
+  }
+
+  

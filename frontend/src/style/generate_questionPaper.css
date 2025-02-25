@@ -1,0 +1,36 @@
+#question-paper-preview {
+    max-width: 688px !important;
+}
+
+.question-header {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    text-align: center;
+}
+.marks {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2px !important;
+    text-align: end;
+}
+
+#question-count-container {
+    background-color: var(--base5);
+    color: white;
+} 
+
+.refresh-btn {
+    color: #7f7f7f;
+}
+
+.generate-question-paper-btn {
+    color: white !important;
+    background-color: var(--base2) !important;
+}
+
+@media (max-width : 430px) {
+    .count-head {
+        font-size: 15px;
+    }
+}

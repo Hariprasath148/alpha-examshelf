@@ -1,0 +1,38 @@
+
+.login-form-container {   
+    background-color: white;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.header {
+    color: var(--base1);
+}
+
+.form-control {
+    border: 1px solid var(--base4);
+}
+
+.form-control:focus {
+    border-color: var(--base2) ;
+   box-shadow:  0 0 0 .25rem var(--base4-shadow);
+}
+
+#login-btn {
+    background-color: var(--base4);
+}
+
+#clg-name {
+    color: var(--base1);
+}
+
+#clg-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+@media (max-width : 520px) {
+    .login-banner {
+        display: none;
+    }
+}

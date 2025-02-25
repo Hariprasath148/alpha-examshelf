@@ -1,0 +1,32 @@
+
+th {
+    background-color: #F32121 !important;
+    color : var(--92) !important;
+    
+}
+
+td {
+    border: none !important;
+}
+
+#noStaffMessage {
+    color : var(--32) !important;
+}
+
+#save-btn {
+    background-color: var(--base4);
+}
+
+.form-check-input:checked {
+    background-color: #0d6efd !important;
+    border-color: #0d6efd;
+}
+
+form input,label {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+.form-text {
+    color : var(--32) !important;
+}

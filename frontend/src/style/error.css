@@ -1,0 +1,10 @@
+
+#error-image {
+    width: 300px ;
+}
+
+#home-button {
+    text-decoration: none;
+    background-color: var(--base2);
+    color: white;
+}

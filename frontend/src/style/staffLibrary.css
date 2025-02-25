@@ -1,0 +1,151 @@
+
+.Custom_Button {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0px 15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.Custom_Button:hover {
+  background-color: #F32121!important;
+  color: white;
+}
+.Custom_Button.active {
+  background-color: #F32121!important;
+  color: white;
+  border: 2px solid #F32121;
+}
+.card-body{
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.card-body::-webkit-scrollbar{
+  display: none;
+}
+.cus_but{
+  background-color: var(--base4);
+  border-radius: 10px;
+  border: none;
+  padding: 10px 20px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  font: var(--main-font);
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.submit-button {
+  background-color: var(--base4);
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: var(--base1);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-control{
+  border: 1px solid var(--base4)!important;
+}
+
+.cards{
+  border: 1px solid var(--base4)!important;
+  border-radius: 12px;
+}
+
+.bt1{
+  text-decoration: none;
+  width: 100px;
+  color: #fff;
+  background-color: #F32121 !important;
+  border: none!important;
+  padding: 5px;
+  border-radius:4px;
+}
+
+.bt2{
+  width: 100px;
+  text-decoration: none;
+  background-color: var(--base4)!important;
+  border: none!important;
+  color: #000;
+  padding: 5px;
+  border-radius:4px;
+}
+.bt3{
+  text-decoration: none;
+  background-color: var(--base4)!important;
+  border: none!important;
+  color: #000;
+  padding: 10px;
+  border-radius:8px;
+}
+.card-container{
+  background-color: gray;
+  border-radius: 12px;
+}
+.Trash-icon{
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  top: 12px;
+}
+.qn_card{
+  cursor: pointer!important;
+  border-radius: 12px;
+}
+.t_1{
+  max-width: 1200px;
+  min-width: 500px;
+  text-align: center;
+  margin-left: 30px;
+}
+
+#generate-btn {
+  background-color: #F32121;
+  border: 1px solid #F32121;
+}

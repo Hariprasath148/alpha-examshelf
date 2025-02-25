@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+:root {
+    /*Base and theme color*/
+    --base1 : #C40C0C;
+    --base2 : #FF6500;
+    --base3 : #FF8A08;
+    --base4 : #FFC100;
+    --base5 : #2B3894;
+    /* box-shadow color */
+    --base1-shadow : rgb(196, 12, 12 , .25);
+    --base2-shadow : rgb(255, 101, 0 , .25);
+    --base3-shadow : rgb(255, 138, 8 , .25);
+    --base4-shadow : rgb(255, 193, 0 , .25);
+    /* container and border color */    
+    --8: hsl(220deg 7.32% 8.04%);
+    --12: hsla(210, 7%, 12%, 1);
+    --15: hsla(216, 6%, 15%, 1);
+    --22: hsla(210, 7%, 22%, 1);
+    --32: hsla(210, 7%, 32%, 1);
+    --42: hsla(210, 7%, 42%, 1);
+    --52: hsla(210, 7%, 52%, 1);
+    --62: hsla(210, 7%, 62%, 1);
+    --72: hsla(200, 7%, 72%, 1);
+    --82: hsla(200, 7%, 82%, 1);
+    --86: #F0F0F0;
+    --92: hsla(200, 7%, 92%, 1);
+    /* fonts */
+    --main-font : 'Roboto', sans-serif ;
+    --staff-font : "Inter", serif ;
+    /* main shadows */
+    --main-shadow : 0 0 10px hsla(200, 7%, 72%, 1);
+}
+
+#Staff-layout.dark {
+    background-color: black !important;
+    color: white !important;
+    --86 :  hsla(210, 7%, 22%, 1);
+    --32 : hsla(210, 7%, 62%, 1);
+}
