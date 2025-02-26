@@ -17,7 +17,7 @@ app.use(cors({
     origin: process.env.APPLICATION_URL,
     credentials: true
 }));
-
+connectDB();
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.json({ limit: "10mb" }))
@@ -32,5 +32,4 @@ app.use("/",(req,res)=>{
 
 app.listen(PORT, () => {
     console.log("Server is running on port:", PORT);
-    connectDB();
 });
