@@ -1,6 +1,6 @@
 import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom"
-import "../style/Staff_card.css"
+import "../style/staff_card.css"
 
 export const Root_Layout = () => {
 

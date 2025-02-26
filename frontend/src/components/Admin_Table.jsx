@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useMutation, useQuery , useQueryClient } from '@tanstack/react-query';
 import baseURL from '../constant/constant';
-import "../style/Staff_card.css"
+import "../style/staff_card.css";
 import "../style/admin_table.css"
 import { toast } from 'react-hot-toast';
 

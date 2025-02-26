@@ -3,7 +3,7 @@ import { Staff_card } from '../components/Staff_card'
 import { Staff_Library } from '../components/Staff_Library'
 import { Admin_Table } from "../components/Admin_Table"
 import { useState } from 'react'
-import "../style/Staff_card.css"
+import "../style/staff_card.css"
 import baseURL from '../constant/constant';
 import { useQuery , useQueryClient } from '@tanstack/react-query'
 
