@@ -311,7 +311,6 @@ export const Generate_New_Question_Paper = () => {
 
     const generate_questionPaper = ()=> {
         let final_pdf_format = document.querySelector("#question-paper-preview").innerHTML;
-        console.log(final_pdf_format);
         post_question_paper(final_pdf_format);
     }
 

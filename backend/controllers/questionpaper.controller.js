@@ -184,7 +184,7 @@ export const generate_questionPaper = async (req , res ) => {
 
                 body{
                     font-size: 12px;
-                    font-family: serif !important;
+                    font-family: font-family: "Times New Roman", Times, serif !important;
                 } 
                 .question-header {
                     font-size: 14px !important;
