@@ -2,17 +2,38 @@
     max-width: 688px !important;
 }
 
-.question-header {
-    font-size: 14px;
+.question-header-table {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.question-header-body {
+    width: 100%;
+}
+
+.question-header-two {
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 2px;
+    margin: 0 !important;
+}
+
+.question-clg {
+    font-size: 16px !important;
+    font-weight: bold;
+    margin: 0 !important;
     text-align: center;
 }
-.marks {
-    font-size: 14px;
+
+.question-header {
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 2px !important;
-    text-align: end;
+    text-align: center;
+    margin: 0 !important;
+}
+
+#questionpaper-logo {
+    width: 65px;
+    height: 100%;
 }
 
 #question-count-container {

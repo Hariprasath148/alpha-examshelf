@@ -141,31 +141,58 @@ export const generate_questionPaper = async (req , res ) => {
         }     
         const page = await browser.newPage();
         await page.setContent(htmlContent);
+        await page.waitForSelector('img');
         await page.addStyleTag({
             content :`
-                .header-container { 
+                .question-header-table {
+                    width: 100%;
+                    margin-bottom: 15px;
+                }
+
+                .question-header-body {
+                    width: 100%;
                     break-inside: avoid !important; 
                     page-break-inside: avoid !important; 
                     page-break-before: avoid !important;
                     page-break-after: avoid !important;
-                } 
+                }
+
+                .question-header-two {
+                    font-size: 14px !important;
+                    font-weight: bold;
+                    margin: 2px !important;
+                }
+
+                .question-clg {
+                    font-size: 16px !important;
+                    font-weight: bold;
+                    margin: 0 !important;
+                    text-align: center;
+                }
+
+                .question-header {
+                    font-size: 14px !important;
+                    font-weight: bold;
+                    text-align: center;
+                    margin: 2px !important;
+                }
+
+                #questionpaper-logo {
+                    width: 65px;
+                    height: 100%;
+                }
+
                 body{
-                    line-height:0.5;
+                    font-size: 12px;
                 } 
                 .question-header {
-                    font-size: 16px;
+                    font-size: 14px !important;
                     font-weight: bold;
                     text-align: center;
                 } 
                 td { 
-                    line-height : 1.5; 
+                    line-height : 1.2; 
                 } 
-                .marks {
-                    font-size: 16px;
-                    font-weight: bold;
-                    margin-bottom: 2px !important;
-                    text-align: end;
-                }
         `});
         const pdfBuffer = await page.pdf({ 
             width: "688px",

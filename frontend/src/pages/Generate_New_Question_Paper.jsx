@@ -35,20 +35,17 @@ export const Generate_New_Question_Paper = () => {
         time : 1.5
     };
 
-    const [date , setDate] = useState(null);
     const [questionPaper_code , setQuestionPaper_code] = useState(null);
+    const [questionPaper_Department , setquestionPaper_Department] = useState(null);
+    const [questionPaper_SubjectName , setquestionPaper_SubjectName] = useState(null);
+    const [questionPaper_SubjectCode , setquestionPaper_SubjectCode] = useState(null);
+    const [questionPaper_year , setquestionPaper_year] = useState(null);
     const [questionPaper_format , SetQuestionPaper_format] = useState(sem_pattern);
     const [current_questionPaper_format , set_Current_QuestionPaper_format] = useState("sem");
     const [subject_name , setSubject_name] = useState(null);
     const [subject_code , setSubject_code] = useState(null);
     const [questionStatus , setQuestionStatus] = useState(false);
     const [questionSectionDisplay , setQuestionSectionDisplay] = useState(false);
-    // const [fetchedThreeMark , setFetchedThreeMark] = useState([]);
-    // const [fetchedSixMark , setFetchedSixMark] = useState([]);
-    // const [fetchedTenMark , setFetchedTenMark] = useState([]);
-    // const [selectedThreeMark , setSelectedThreeMark ] = useState([]);
-    // const [selectedSixMark , setSelectedSixMark ] = useState([]);
-    // const [selectedTenMark , setSelectedTenMark ] = useState([]);
     const [fetchedQuestion , setFetchedQuestion] = useState({
         mark_3 : [],
         mark_6 : [],
@@ -116,9 +113,6 @@ export const Generate_New_Question_Paper = () => {
                 if(!res.ok) {
                     return new Error(data.error || "Something Went Wrong");
                 }
-                // setFetchedThreeMark(data.mark_3);
-                // setFetchedSixMark(data.mark_6);
-                // setFetchedTenMark(data.mark_10);
                 setFetchedQuestion({
                     mark_3 : data.mark_3,
                     mark_6 : data.mark_6,
@@ -187,9 +181,6 @@ export const Generate_New_Question_Paper = () => {
         e.preventDefault();
         setQuestionStatus(true);
         get_questions(subject_code);
-        // setFetchedThreeMark([]);
-        // setFetchedSixMark([]);
-        // setFetchedTenMark([]);
         setFetchedQuestion({
             mark_3 : [],
             mark_6 : [],
@@ -319,7 +310,8 @@ export const Generate_New_Question_Paper = () => {
     };
 
     const generate_questionPaper = ()=> {
-        let final_pdf_format = document.querySelector("#question-paper-preview").innerHTML
+        let final_pdf_format = document.querySelector("#question-paper-preview").innerHTML;
+        console.log(final_pdf_format);
         post_question_paper(final_pdf_format);
     }
 
@@ -348,14 +340,29 @@ export const Generate_New_Question_Paper = () => {
                         </div>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="questionPaperCode" className="mb-2">Enter the Question Paper Code</label>
-                        <input type="text" name="questionPaperCode" id="questionPaperCode"  className="form-control mb-2" aria-describedby="questionPaperCode_dis" onChange={(e)=> setQuestionPaper_code(e.target.value) }/>
-                        <div className="form-text " id="questionPaperCode_dis">The Question Paper code is on the top of the Question Paper Page</div>
+                        <label htmlFor="questionPaperDepartment" className="mb-2">Enter Your Department</label>
+                        <input type="text" name="questionPaperDepartment" id="questionPaperDepartment"  className="form-control mb-2" aria-describedby="questionPaperDepartment_dis" onChange={(e)=> setquestionPaper_Department(e.target.value) }/>
+                        <div className="form-text " id="questionPaperDepartment_dis">Enter your name of the department</div>
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="examdate" className="mb-2">Enter the Date Of Examination</label>
-                        <input type="text" name="examdate" id="examdate"  className="form-control mb-2" aria-describedby="examdate_dis" onChange={(e)=> setDate(e.target.value) }/>
-                        <div className="form-text " id="examdate_dis">Enter the Examination Date</div>
+                        <label htmlFor="questionPaperCode" className="mb-2">Enter the Exam type with Date or Question Paper code</label>
+                        <input type="text" name="questionPaperCode" id="questionPaperCode"  className="form-control mb-2" aria-describedby="questionPaperCode_dis" onChange={(e)=> setQuestionPaper_code(e.target.value) }/>
+                        <div className="form-text " id="questionPaperCode_dis">Example : MID SEMESTER APRIL 2024</div>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="questionPaperyear" className="mb-2">Enter the Year and Semester</label>
+                        <input type="text" name="questionPaperyear" id="questionPaperyear"  className="form-control mb-2" aria-describedby="questionPaperyear_dis" onChange={(e)=> setquestionPaper_year(e.target.value) }/>
+                        <div className="form-text " id="questionPaperyear_dis">Enter the year and Semester for the question paper</div>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="questionPaperSubjectName" className="mb-2">Enter the Subject Name</label>
+                        <input type="text" name="questionPaperSubjectName" id="questionPaperSubjectName"  className="form-control mb-2" aria-describedby="questionPaperSubjectName_dis" onChange={(e)=> setquestionPaper_SubjectName(e.target.value) }/>
+                        <div className="form-text " id="questionPaperSubjectName_dis">Enter the subject name of the question paper</div>
+                    </div>
+                    <div className="mb-3">
+                        <label htmlFor="questionPaperSubjectCode" className="mb-2">Enter the Subject Code</label>
+                        <input type="text" name="questionPaperSubjectCode" id="questionPaperSubjectCode"  className="form-control mb-2" aria-describedby="questionPaperSubjectCode_dis" onChange={(e)=> setquestionPaper_SubjectCode(e.target.value) }/>
+                        <div className="form-text " id="questionPaperSubjectCode_dis">Enter the subject Code of the question paper</div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="questionPaperFormat" className="mb-2">Selecte The question Paper Format</label>
@@ -442,17 +449,40 @@ export const Generate_New_Question_Paper = () => {
                         }       
                     </div>
                     <div className="container-fluid mt-5 mb-5 shadow p-5" id="question-paper-preview">
-                        <div className="header-container">
-                            <p className='question-header'>GURU NANAK COLLEGE (AUTONOMOUS), CHENNAI – 42.</p>
-                            <p className='question-header'>{date}</p>
-                            <p className='question-header'>{questionPaper_code}</p>
-                            <p className='question-header'>{subject_name}</p>
-                            <p className='question-header'>{subject_code}</p>
-                            <p className='marks'>MAX. MARKS : {questionPaper_format.max_marks}</p>
-                            <p className='marks'>TIME : {questionPaper_format.time}</p>
-                            <p className='question-header'>{questionPaper_format.mark_3_topic_main}</p>
-                            <p className='question-header'>{questionPaper_format.mark_3_topic_sub}</p>
-                        </div>
+                        <table className='question-header-table'>
+                            <tbody>
+                                <tr>
+                                    <td width="15%" valign='center' align='center'>
+                                        <img src={import.meta.env.VITE_COLLEGE_LOGO} alt="college logo" id="questionpaper-logo" />
+                                    </td>
+                                    <td width="85%">
+                                        <p className='question-clg'>GURU NANAK COLLEGE (AUTONOMOUS), CHENNAI – 42.</p>
+                                        <p className='question-header'>{questionPaper_Department}</p>
+                                        <p className='question-header'>{questionPaper_year}</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table className='question-header-table'>
+                            <tbody>
+                                <tr>
+                                    <td width="70%">
+                                        <p className='question-header-two'>SUBJECT NAME : {questionPaper_SubjectName}</p>
+                                        <p className='question-header-two'>CODE : {questionPaper_SubjectCode}</p>
+                                    </td>
+                                    <td width="30%">
+                                        <p className='question-header-two'>Max. Marks : {questionPaper_format.max_marks}</p>
+                                        <p className='question-header-two'>TIME : {questionPaper_format.time} Hrs</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table className='question-header-body'>
+                            <tbody>
+                                <tr><td className='question-header'>{questionPaper_format.mark_3_topic_main}</td></tr>
+                                <tr><td className='question-header'>{questionPaper_format.mark_3_topic_sub}</td></tr>         
+                            </tbody>
+                        </table>
                         <table className='question-table'>
                             <tbody>
                                 { SelectedQuestion.mark_3.map((element , index)=> (
@@ -461,10 +491,12 @@ export const Generate_New_Question_Paper = () => {
                                 }
                             </tbody>
                         </table>
-                        <div className="header-container">
-                            <p className='question-header'>{questionPaper_format.mark_6_topic_main}</p>
-                            <p className='question-header'>{questionPaper_format.mark_6_topic_sub}</p>
-                        </div>
+                        <table className='question-header-body'>
+                            <tbody>
+                                <tr><td className='question-header'>{questionPaper_format.mark_6_topic_main}</td></tr>
+                                <tr><td className='question-header'>{questionPaper_format.mark_6_topic_sub}</td></tr>         
+                            </tbody>
+                        </table>
                         <table className='question-table'>
                             <tbody>
                                 { SelectedQuestion.mark_6.map((element , index)=> (
@@ -473,10 +505,12 @@ export const Generate_New_Question_Paper = () => {
                                 }
                             </tbody>
                         </table>
-                        <div className="header-container">
-                            <p className='question-header'>{questionPaper_format.mark_10_topic_main}</p>
-                            <p className='question-header'>{questionPaper_format.mark_10_topic_sub}</p>
-                        </div>
+                        <table className='question-header-body'>
+                            <tbody>
+                                <tr><td className='question-header'>{questionPaper_format.mark_10_topic_main}</td></tr>
+                                <tr><td className='question-header'>{questionPaper_format.mark_10_topic_sub}</td></tr>         
+                            </tbody>
+                        </table>
                         <table className='question-table'>
                             <tbody>
                                 { SelectedQuestion.mark_10.map((element , index)=> (
@@ -485,9 +519,11 @@ export const Generate_New_Question_Paper = () => {
                                 }
                             </tbody>
                         </table>
-                        <div className="header-container">
-                            <p className='question-header'>**********</p>
-                        </div>
+                        <table className='question-header-body'>
+                            <tbody>
+                                <tr><td className='question-header'>***********</td></tr>       
+                            </tbody>
+                        </table>
                     </div>
                     {
                         isPostPuestionPaperError && <div className='mt-2 mb-3'>
