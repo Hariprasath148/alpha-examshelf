@@ -146,13 +146,13 @@ export const generate_questionPaper = async (req , res ) => {
             content :`
                 body{
                     font-size: 12px;
-                    font-family: "Times New Roman", Times, serif !important;
+                    font-family: sans-serif;
                 } 
 
                 td { 
                     line-height : normal; 
                     white-space: normal;
-                    font-size: 12px !important;
+                    font-size: 13px !important;
                 } 
 
                 .question-header-table {
@@ -197,7 +197,7 @@ export const generate_questionPaper = async (req , res ) => {
                     font-size: 14px !important;
                     font-weight: bold;
                     text-align: center;
-                }
+                } 
         `});
         await page.evaluate(() => {
             document.body.style.fontFamily = '"Times New Roman", Times, serif';
