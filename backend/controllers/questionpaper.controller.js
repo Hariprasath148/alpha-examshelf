@@ -144,6 +144,17 @@ export const generate_questionPaper = async (req , res ) => {
         await page.waitForSelector('img');
         await page.addStyleTag({
             content :`
+                body{
+                    font-size: 12px;
+                    font-family: "Times New Roman", Times, serif !important;
+                } 
+
+                td { 
+                    line-height : normal; 
+                    white-space: normal;
+                    font-size: 13px !important;
+                } 
+
                 .question-header-table {
                     width: 100%;
                     margin-bottom: 15px;
@@ -182,18 +193,11 @@ export const generate_questionPaper = async (req , res ) => {
                     height: 100%;
                 }
 
-                body{
-                    font-size: 12px;
-                    font-family: font-family: "Times New Roman", Times, serif !important;
-                } 
                 .question-header {
                     font-size: 14px !important;
                     font-weight: bold;
                     text-align: center;
-                } 
-                td { 
-                    line-height : 1.2; 
-                } 
+                }
         `});
         const pdfBuffer = await page.pdf({ 
             width: "688px",

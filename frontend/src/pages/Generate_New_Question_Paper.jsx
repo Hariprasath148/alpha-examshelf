@@ -499,7 +499,7 @@ export const Generate_New_Question_Paper = () => {
                         <table className='question-table'>
                             <tbody>
                                 { SelectedQuestion.mark_6.map((element , index)=> (
-                                    <tr key={index} valign="top"><td>{index+1}.</td><td>{element}</td></tr>
+                                    <tr key={index} valign="top"><td>{index+questionPaper_format.mark_3+1}.</td><td>{element}</td></tr>
                                 ))
                                 }
                             </tbody>
@@ -513,7 +513,7 @@ export const Generate_New_Question_Paper = () => {
                         <table className='question-table'>
                             <tbody>
                                 { SelectedQuestion.mark_10.map((element , index)=> (
-                                    <tr key={index} valign="top"><td>{index+1}.</td><td>{element}</td></tr>
+                                    <tr key={index} valign="top"><td>{index+questionPaper_format.mark_3+questionPaper_format.mark_6+1}.</td><td>{element}</td></tr>
                                 ))
                                 }
                             </tbody>
