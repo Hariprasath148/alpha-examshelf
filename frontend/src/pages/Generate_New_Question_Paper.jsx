@@ -467,7 +467,7 @@ export const Generate_New_Question_Paper = () => {
                                 <tr>
                                     <td width="70%">
                                         <p className='question-header-two'>SUBJECT NAME : {questionPaper_SubjectName}</p>
-                                        <p className='question-header-two'>CODE : {questionPaper_SubjectCode}</p>
+                                        <p className='question-header-two'>SUBJECT CODE : {questionPaper_SubjectCode}</p>
                                     </td>
                                     <td width="30%">
                                         <p className='question-header-two'>Max. Marks : {questionPaper_format.max_marks}</p>
