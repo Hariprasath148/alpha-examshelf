@@ -152,12 +152,12 @@ export const generate_questionPaper = async (req , res ) => {
                 td { 
                     line-height : normal; 
                     white-space: normal;
-                    font-size: 13px !important;
+                    font-size: 12px !important;
                 } 
 
                 .question-header-table {
                     width: 100%;
-                    margin-bottom: 15px;
+                    margin-bottom: 10px;
                 }
 
                 .question-header-body {
@@ -169,20 +169,20 @@ export const generate_questionPaper = async (req , res ) => {
                 }
 
                 .question-header-two {
-                    font-size: 14px !important;
+                    font-size: 12px !important;
                     font-weight: bold;
                     margin: 2px !important;
                 }
 
                 .question-clg {
-                    font-size: 16px !important;
+                    font-size: 14px !important;
                     font-weight: bold;
                     margin: 0 !important;
                     text-align: center;
                 }
 
                 .question-header {
-                    font-size: 14px !important;
+                    font-size: 12px !important;
                     font-weight: bold;
                     text-align: center;
                     margin: 2px !important;
@@ -194,14 +194,11 @@ export const generate_questionPaper = async (req , res ) => {
                 }
 
                 .question-header {
-                    font-size: 14px !important;
+                    font-size: 12px !important;
                     font-weight: bold;
                     text-align: center;
                 } 
-        `});
-        await page.evaluate(() => {
-            document.body.style.fontFamily = '"Times New Roman", Times, serif';
-        });   
+        `});  
         const pdfBuffer = await page.pdf({ 
             width: "688px",
             height: "971px",
